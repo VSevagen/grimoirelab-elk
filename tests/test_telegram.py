@@ -43,8 +43,8 @@ class TestTelegram(TestBaseBackend):
         """Test whether JSON items are properly inserted into ES"""
 
         result = self._test_items_to_raw()
-        self.assertEqual(result['items'], 9)
-        self.assertEqual(result['raw'], 9)
+        self.assertEqual(result['items'], 10)
+        self.assertEqual(result['raw'], 10)
 
     def test_raw_to_enrich(self):
         """Test whether the raw index is properly enriched"""
