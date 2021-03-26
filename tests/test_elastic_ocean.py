@@ -23,6 +23,7 @@ import unittest
 
 from grimoire_elk.raw.elastic import ElasticOcean
 from grimoire_elk.errors import ELKError
+from perceval.backends.core.git import Git
 
 
 class TestElasticOcean(unittest.TestCase):
@@ -55,6 +56,12 @@ class TestElasticOcean(unittest.TestCase):
         with self.assertRaises(ELKError):
             _ = ElasticOcean.get_p2o_params_from_url("https://finosfoundation.atlassian.net/wiki/ "
                                                      "--filter-raw")
+
+    def test_get_field_date(self):
+        """Test whether the field date is correctly returned"""
+        perceval_backend = Git('http://example.com', '/tmp/foo')
+        eitems = ElasticOcean(perceval_backend)
+        self.assertEqual(eitems.get_field_date(), 'metadata__updated_on')
 
 
 if __name__ == '__main__':
