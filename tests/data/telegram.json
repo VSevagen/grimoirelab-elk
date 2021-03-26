@@ -259,7 +259,24 @@
                     "username": "animesh_username"
                 },
                 "message_id": 13,
-                "text": "test message"
+                "text": "test message",
+                "sticker":{
+                    "emoji": "\ud83d\udc40",
+                    "file_id": "CAACAgIAAxkBAAMPXqgNA1oj66ib0qG1ZA122OOQrV8AAikAAygPahS3xhSCjzmChhkE",
+                    "file_size": 28338,
+                    "file_unique_id": "AgADKQADKA9qFA",
+                    "height": 512,
+                    "is_animated": true,
+                    "set_name": "Cat2O",
+                    "thumb": {
+                        "file_id": "AAMCAgADGQEAAw9eqA0DWiPrqJvSobVkDXbY45CtXwACKQADKA9qFLfGFIKPOYKGyJnMkS4AAwEAB20AA794AAIZBA",
+                        "file_size": 5968,
+                        "file_unique_id": "AQADyJnMkS4AA794AAI",
+                        "height": 128,
+                        "width": 128
+                    },
+                    "width": 512  
+                }
             },
             "text": "test reply"
         },
