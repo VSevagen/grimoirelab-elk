@@ -34,6 +34,12 @@ class TestJenkins(TestBaseBackend):
     ocean_index = "test_" + connector
     enrich_index = "test_" + connector + "_enrich"
 
+    def test_get_field_author(self):
+        """ Test stuff """
+
+        enrich_backend = self.connectors[self.connector][2]()
+        self.assertEqual(enrich_backend.get_field_author(), None)
+
     def test_has_identites(self):
         """Test value of has_identities method"""
 

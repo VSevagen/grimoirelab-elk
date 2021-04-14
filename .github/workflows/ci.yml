@@ -81,6 +81,7 @@ jobs:
       run: |
         cd tests
         coverage run --source=grimoire_elk run_tests.py
+        coverage report -m
         # --service=github is a workaround for bug
         # https://github.com/coveralls-clients/coveralls-python/issues/251
         coveralls --service=github

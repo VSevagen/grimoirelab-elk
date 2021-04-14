@@ -42,6 +42,15 @@ class TestCoCom(TestBaseBackend):
         enrich_backend = self.connectors[self.connector][2]()
         self.assertFalse(enrich_backend.has_identities())
 
+    def test_get_identities(self):
+        """Test stuff"""
+
+        identities = []
+        enrich_backend = self.connectors[self.connector][2]()
+
+        for item in self.items:
+            self.assertEqual(enrich_backend.get_identities(item), identities)
+
     def test_items_to_raw(self):
         """Test whether JSON items are properly inserted into ES"""
 
