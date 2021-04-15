@@ -41,6 +41,14 @@ class TestWeblate(TestBaseBackend):
         enrich_backend = self.connectors[self.connector][2]()
         self.assertTrue(enrich_backend.has_identities())
 
+    def test_get_identities(self):
+        """Test stuff"""
+
+        enrich_backend = self.connectors[self.connector][2]()
+        for item in self.items:
+            identities = enrich_backend.get_sh_identity(item)
+            self.assertEqual(identities, None)
+
     def test_items_to_raw(self):
         """Test whether JSON items are properly inserted into ES"""
 
